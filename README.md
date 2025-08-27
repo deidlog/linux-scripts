@@ -6,6 +6,7 @@ Each script is self-contained and designed to be practical, clean, and easy to u
 ## Scripts
 
 - **disk_monitor** — monitors disk usage, logs alerts, and optionally sends email notifications.
+- **process_monitor** - monitors active processes for high CPU and RAM usage, logs alerts.
 
 ## Getting Started
 
@@ -14,15 +15,18 @@ Each script is self-contained and designed to be practical, clean, and easy to u
 git clone https://github.com/deidlog/linux-scripts.git
 cd linux-scripts
 ```
-2. Go into the script directory and run:
+2. Make any script executable and run it:
 ```bash
-cd disk-monitor
-chmod +x disk-monitor.sh
-./disk_monitor.sh
+cd <scripts_folder>
+chmod +x <script-name>.sh
+./<script_name>.sh [options]
 ```
+3. Each script may have its own usage instructions. Check the README inside each script folder for details.
 
 ## Contributing
 Contributions are welcome! Please submit pull requests or open issues if you have suggestions or improvements.
 
 ## License
 This repository is licensed under MIT License.
+
+---
