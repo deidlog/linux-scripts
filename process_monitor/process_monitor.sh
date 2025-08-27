@@ -11,6 +11,7 @@
 
 
 # ====== Settings ======
+EMAIL=""            # Specify an email address for notifications (or leave it blank)
 CPU_THRESHOLD=70                        # CPU usage threshold in %
 RAM_THRESHOLD=70                        # RAM usage threshold in %
 LOG_DIR="$HOME/logs"                    # Log directory
@@ -35,6 +36,11 @@ send_alert() {
     local message="ALERT: Process $pid ($command) by $user uses CPU: ${cpu}% RAM: ${ram}%!"
 
     log_message "$message"
+
+    # If an email is specified, we will send an email
+    if [[ -n "$EMAIL" ]]; then
+        echo "$message" | mail -s "Process Usage Alert on $(hostname)" "$EMAIL"
+    fi
 }
 
 # ====== Main logic ======
