@@ -1,15 +1,16 @@
 # Process Monitor
 
 A simple Bash script to monitor high CPU and RAM usage processes on Linux systems.
-Logs resource usage and alerts for processes exceeding defined thresholds.
+Logs resource usage and sends alerts for processes exceeding defined thresholds.
 
 ## Features
 - Monitors all running processes.
-- Logs resource usage events to a file (`$HOME/logs/process_monitor.log` by default).
-- Logs alerts for processes exceeding CPU or RAM thresholds.
+- Logs events to a file (`$HOME/logs/process_monitor.log` by default).
+- Optional email notifications for processes exceeding CPU or RAM thresholds.
 - Easy to run manually or as a cron job.
 
 ## Configuration
+- `EMAIL` — email address for notifications (optional, leave empty if not needed).
 - `CPU_THRESHOLD` — maximum allowed CPU usage in percent (default: 70%).
 - `RAM_THRESHOLD` — maximum allowed RAM usage in percent (default: 70%).
 - `LOG_DIR` — directory for log files (default: `$HOME/logs`).
@@ -33,7 +34,7 @@ To run the script every 5 minutes and log output:
 ```
 
 ## Notes
-- Alerts are logged locally; can be extended to send notifications via email or messaging apps (Telegram, Slack, etc.) using APIs.
+- Can be extended to send notifications via messaging apps (Telegram, Slack, etc.) using APIs.
 - Safe logging in $HOME/logs by default; can be changed to /var/log if run as root.
 - Can be integrated with system monitoring dashboards (e.g., Grafana, Zabbix) by parsing the log file. 
 ---
