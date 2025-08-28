@@ -7,7 +7,7 @@ Each script is self-contained and designed to be practical, clean, and easy to u
 
 - **disk_monitor** — monitors disk usage, logs alerts, and optionally sends email notifications.
 - **process_monitor** - monitors active processes for high CPU and RAM usage, logs alerts.
-- **backup_directory** — backs up a directory as a date-stamped tar.gz archive and logs the process; destination can be specified.
+- **backup_directory** — backs up a directory as a date-stamped tar.gz archive and logs the process.
 
 ## Getting Started
 
