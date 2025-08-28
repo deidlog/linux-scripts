@@ -23,7 +23,7 @@ mkdir -p "$LOG_DIR"
 # Logs messages to file with timestamp
 log_message() {
     local message="$1"
-    echo "$(date +%Y-%m-%d %H:%M:%S) : ${message}" | tee -a "$LOG_FILE"
+    echo "$(date +'%Y-%m-%d %H:%M:%S') : ${message}" | tee -a "$LOG_FILE"
 }
 
 # Alerts about high resource usage
